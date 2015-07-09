@@ -10,6 +10,18 @@ Technologies: **Silverlight**, **.NET Framework**, **C#**
 
 # Screenshots
 
+### Intro Screen
+
+![MetroPresentation Intro Screen](https://raw.githubusercontent.com/arvystate/MetroPresentation/master/Resources/MetroPresentation_1.png)
+
+### Page Screen
+
+![MetroPresentation Intro Screen](https://raw.githubusercontent.com/arvystate/MetroPresentation/master/Resources/MetroPresentation_2.png)
+
+### Random Colors
+
+![MetroPresentation Random Color](https://raw.githubusercontent.com/arvystate/MetroPresentation/master/Resources/MetroPresentation_3.png)
+
 # License
 
 **MetroPresentation** is available under the **GPL** license. See [LICENSE](https://github.com/arvystate/MetroPresentation/blob/master/LICENSE) file for more information.
