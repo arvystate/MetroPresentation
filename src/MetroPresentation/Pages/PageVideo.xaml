@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="MetroPresentation.Pages.PageVideo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseLeftButtonDown="LayoutRootMouseLeftButtonDown">
+        <Grid.Resources>
+            <Storyboard x:Name="myStoryboard" Completed="MyStoryboardCompleted">
+                <DoubleAnimation Storyboard.TargetName="Intro" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.5" />
+            </Storyboard>
+        </Grid.Resources>
+
+        <Grid Name="SlideBase">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Rectangle Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE65E20" Offset="0" />
+                        <GradientStop Color="#FFEB7427" Offset="0.948" />
+                        <GradientStop Color="White" Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            
+            <Viewbox Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Uniform">
+                <TextBlock Text="Video" Margin="35" FontSize="54" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Viewbox>
+
+            <Viewbox Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="40,20,40,20">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="• Lorem ipsum dolor sit amet." FontSize="46" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                </Grid>
+            </Viewbox>
+
+            <Grid Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,40">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                
+                <MediaElement Name="video" Grid.ColumnSpan="2" Source="../Images/sample.wmv" AutoPlay="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MediaFailed="MediaElementMediaFailed" />
+
+                <Button Name="play_video" Grid.Row="1" Grid.Column="0" Width="100" Margin="5,10,5,5" Height="30" FontSize="10" FontFamily="../Font/SegoeWP-Bold.ttf#Segoe WP Bold" BorderBrush="Black" Foreground="Black" BorderThickness="2" Content="PLAY" Click="PlayVideoClick" HorizontalAlignment="Right" />
+                <Button Name="stop_video" Grid.Row="1" Grid.Column="1" Width="100" Margin="5,10,5,5" Height="30" FontSize="10" FontFamily="../Font/SegoeWP-Bold.ttf#Segoe WP Bold" BorderBrush="Black" Foreground="Black" BorderThickness="2" Content="STOP" Click="StopVideoClick" HorizontalAlignment="Left" />
+            </Grid>
+        </Grid>
+        
+        <Grid Name="Intro" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FFE65E20" Opacity="0">
+            <TextBlock Text="Video" FontSize="62" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        
+    </Grid>
+</UserControl>

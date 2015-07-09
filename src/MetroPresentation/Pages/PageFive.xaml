@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="MetroPresentation.Pages.PageFive"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="White" MouseLeftButtonDown="LayoutRootMouseLeftButtonDown" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.Resources>
+            <Storyboard x:Name="myStoryboard">
+                <DoubleAnimation Storyboard.TargetName="Intro" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.5" />
+            </Storyboard>
+        </Grid.Resources>
+
+        <Grid Name="SlideBase" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Rectangle Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF54AF0E" Offset="0" />
+                        <GradientStop Color="#FF68C210" Offset="0.948" />
+                        <GradientStop Color="White" Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            
+            <Viewbox Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Uniform">
+                <TextBlock Text="Page 5" Margin="35" FontSize="54" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Viewbox>
+
+            <Viewbox Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,20,40,40">
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="• Lorem ipsum dolor sit amet." FontSize="46" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                    <TextBlock Grid.Row="1" Text="-  Lorem ipsum dolor sit amet." Margin="20,0,0,0" FontSize="38" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                    <TextBlock Grid.Row="2" Text="-  Lorem ipsum dolor sit amet." Margin="20,0,0,0" FontSize="38" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                    <TextBlock Grid.Row="3" Text="-  Lorem ipsum dolor sit amet." Margin="20,0,0,0" FontSize="38" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                    <TextBlock Grid.Row="4" Text="-  Lorem ipsum dolor sit amet." Margin="20,0,0,0" FontSize="38" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+
+                    <TextBlock Grid.Row="5" Text="• Lorem ipsum dolor sit amet." FontSize="46" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                    <TextBlock Grid.Row="6" Text="-  Lorem ipsum dolor sit amet." Margin="20,0,0,0" FontSize="38" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                    <TextBlock Grid.Row="7" Text="-  Lorem ipsum dolor sit amet." Margin="20,0,0,0" FontSize="38" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                    <TextBlock Grid.Row="8" Text="-  Lorem ipsum dolor sit amet." Margin="20,0,0,0" FontSize="38" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                    <TextBlock Grid.Row="9" Text="-  Lorem ipsum dolor sit amet." Margin="20,0,0,0" FontSize="38" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                </Grid>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="Intro" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF54AF0E" Opacity="0">
+            <TextBlock Text="Page 5" FontSize="62" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        
+    </Grid>
+</UserControl>

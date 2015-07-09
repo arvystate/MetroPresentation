@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <!-- Localizable strings -->
+    <system:String x:Key="lang_fullscreen_on">FULL SCREEN</system:String>
+    <system:String x:Key="lang_fullscreen_off">BACK TO WINDOW</system:String>
+
+    <system:String x:Key="lang_presentation_on">PRESENTATION ON</system:String>
+    <system:String x:Key="lang_presentation_off">PRESENTATION OFF</system:String>
+</ResourceDictionary>

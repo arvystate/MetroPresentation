@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="MetroPresentation.Pages.PageAuthor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="White" MouseLeftButtonDown="LayoutRootMouseLeftButtonDown" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.Resources>
+            <Storyboard x:Name="myStoryboard">
+                <DoubleAnimation Storyboard.TargetName="Intro" Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:0.5" />
+            </Storyboard>
+        </Grid.Resources>
+
+        <Grid Name="SlideBase">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Rectangle Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF200044" Offset="0" />
+                        <GradientStop Color="#FF200044" Offset="0.948" />
+                        <GradientStop Color="White" Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Viewbox Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Uniform">
+                <TextBlock Text="Author" Margin="35" FontSize="54" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Viewbox>
+
+            <Viewbox Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="40,20,40,40">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Margin="0,0,0,40" TextAlignment="Center" FontSize="46" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light">
+                        Thank you for your attention!<LineBreak />
+                        Questions?
+                    </TextBlock>
+                    <TextBlock Grid.Row="1" Text="Author:" FontSize="32" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                    <TextBlock Grid.Row="2" Text="Dal Rupnik (Legoless) - legoless@gmail.com" FontSize="22" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                    <TextBlock Grid.Row="3" Text="Faculty for electrical engineering and computer science" HorizontalAlignment="Left" FontSize="22" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                    <TextBlock Grid.Row="4" Text="Slovenia, september 2011" Margin="0,60,0,0" FontSize="28" TextAlignment="Center" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" />
+                </Grid>
+            </Viewbox>
+        </Grid>
+
+        <Grid Name="Intro" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF200044" Opacity="0">
+            <TextBlock Text="Author" FontSize="62" FontFamily="../Font/SegoeWP-Light.ttf#Segoe WP Light" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        
+    </Grid>
+</UserControl>
